@@ -15,6 +15,7 @@ class CreateButifarrasTable extends Migration
     {
         Schema::create('butifarras', function (Blueprint $table) {
             $table->id();
+            $table->string('Nombre');
             $table->timestamps();
         });
     }
