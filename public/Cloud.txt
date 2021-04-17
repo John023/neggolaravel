@@ -1,0 +1,95 @@
+La idea de hoy es contarles un poquito muy a groso modo qué es la Nube, y más específicamente qué es la nube de Azure...
+
+¿Qué vamos a hablar hoy?
+
+- Qué es la Computación en la Nube
+- Qué es la nube persé.. (Muchas personas hablan de la nube, muchos creemos que es el lugar exclusivamente donde dejamos los archivos,
+			la idea es contarles un poco más de qué se trata la nube, qué tenemos y cómo funciona)
+
+
+[SLIDE: Computación en la Nube]
+
+Vamos a ver básicamente de abajo para arriba, y es...
+Vamos a ver un poco acerca de qué es la Infraestructura como Servicio (IaaS), Qué es la plataforma como servicio (PaaS), qué es el
+software como Servicio (SaaS), y vamos a ver cómo al final del día todo ésto es lo que nos permite habilitar las tecnologías de nube
+y lo que constituye la nube persé y qué es la nube, y esperamos que al finalizar éste espacio, por lo menos cuando les pregunten qué
+es la nube, pues ya sepan o tengan un mejor concepto del que llegaron.
+
+Vamos a ver y puntualmente comencemos con Infraestructura como servicio (IaaS, Infrastructure as a Service).
+
+[SLIDE: Componenetes de un computador]
+
+Pero antes de eso, hablemos de un tema muy sencillo y es, qué trae un computador por dentro... Si cuando yo hablo de un computador..
+o cuando vengo a la mente y pienso qué tiene un computador, pensemos en qué son esos componentes que trae.. y alejémonos un poquito
+de como yo interactúo con el computador, no pensemos tanto en el monitor, en el mouse, o el teclado.. Sino pensemos mucho más de
+cuáles son esos componentes que hay subyacentes, entonces.., les pregunto a ustedes, si yo abro esa caja negra que ven en la gráfica,
+¿qué tendría yo dentro de ella?.. ¿qué encontraría?..
+
+Entonces, si cogemos y abrimos, y de una manera muy muy resumida y muy sencilla diría yo, el computador constituye basicamente de 4
+componentes, esos componentes son principalmente un procesador, que es como el cerebro.. Es el que está haciendo todo tipo de operaci
+ones, el que está sumando, restando, uniendo, quitando.. el que está procesando valga la redundancia..
+
+Tenemos memoria, entonces la memoria es lo que me permite es realizar ese procesamiento, es tener los componentes en esa memoria.. la
+famosa RAM, lo que tengo presente.
+
+Tengo un almacenamiento, un disco duro.. un componente donde guardo esa información, guardo lo que estoy procesando..
+
+Y también tengo una tarjeta de red, que es la que me permite comunicarme con todo el resto del mundo
+
+
+Entonces de una manera muy muy muuy básica, podríamos afirmar que un computador tiene:
+
+Procesaror
+Memoria
+Almacenamiento (discos duros, o sólidos)
+y red.
+
+Tonces ahora ¿qué ocurre, y dónde nace la nube?
+
+[SLIDE: Virtualización]
+
+Para entender la nube, antes, hay que entender un concepto muy importante que se llama la Virtualización.
+Entonces, para entender la virtualización, pensemos en algo muy sencillo, imaginémonos una manzana.. Si nos imaginamos ahora mismo una
+manzana, ¿qué tiene esa manzana que están pensando en su mente?.. quee.. ¿Qué son esos componentes que tiene esa manzana?, tal vez
+esa manzana tiene.. una cáscara.. que puede ser de color rojo o verde, puede tener una textura, puede tener un sabor, ese jugo..
+Básicamente a lo que voy es, ustedes tienen un concepto de manzana en sus mentes. Felicitaciones, han virtualizado una manzana.
+
+La virtualización es, en esencia, llevar el concepto del computador en términos lógicos.
+Entonces, si yo creo un computador en términos lógicos, si estoy pensando en un computador, en un algo físico, ¿qué tiene ese computador?
+Pues esa memoria, ese procesador, ese almacenamiento, esa tarjeta de red.
+
+Lo que ocurria, o lo que ocurrió en los 70's es, habían estos data Center, [eso que ven ustedes ahí a la izquierda],
+que son esos lugares donde se acumulaban muchos computadores, y tenían servidores.. ¿qué diferencia hay entre un servidor y un computador normal?
+En realidad ninguna, simplemente que el servidor tiene unos componentes muchos más.. avanzados en términos de sus capacidades, más recursos,
+están conectados y disponibles 24/7 y los ubican en espacios con temperaturas bajas para un mejor rendimiento. Pero en esencia, es el
+mismo computador. Y lo que descubrieron las personas de los Data Center es que los servidores eran sub-utilizados.. entonces piensen
+ustedes por ejemplo cuando prenden un computador en sus casas, que a veces el computador al comienzo está como cargando y uno oye un
+ventilador por allá a punto de despegar, está sí, procesando, pero ya cuando cargó el sistema, cargó el computador, el computador consume muy poco recursos
+entonces las personas dijeron "oigan, qué hago si tengo un computador muy caro.. [tengo eso que ustedes ven en la imagen ahí del DataCenter].. y quiero sacarle el jugo..
+quiero que mi computador no opere al 5 o 10% sino que opere el 80 - 90%", entonces, ahí se creó la virtualización..
+Y lo que hace la virtualización.. (que es un concepto, un tanto abstracto) es crear una máquina virtual.. ¿Y qué es una máquina virtual?
+Una máquina virtual es precisamente ese concepto que tenemos de un computador pero a nivel lógico.
+
+Entonces lo que hace la virtualización es coger uno de éstos servidores gigantes, y hacerles pensar que son muchísimas máquinas pequeñitas, muchísimas máquinas que
+ellas no saben que no existen, [pero que en realidad están existiendo en lo que ustedes ven ahí.. en el servidor]
+
+Entonces hay un sistema que nos permite hacer ésto que se llama el "Hypervisor". Pensemos en el Hypervisor como el papá de los sistemas operativos, como el que manda.
+Entonces sobre ese hypervisor yo lo que creo son muchas máquinas virtuales, muchas cajitas de estos, [muchos servidores], que sólo existen a nivel lógico,
+y lo que logro ahí es algo muy interesante, logro obtener varias de ellas en un único servidor físico lo cual hace que el computador opere al 80 o 90%,
+y lo segundo que hace es desacoplar del hardware, es decir, ..yo ya no.. a mí ya no me importa lo que está debajo.. ^^si
+Eso es fundamental porque en la nube, cuando ya vayamos a explicar Infraestructura y demás, en la nube, yo no dependo de la infraestructura subyacente..
+Algo que ocurre mágicamente [diría yo], es que esas máquinas virtuales se mueven a través de esos servidores físicos. Entonces ellas no dependen de la
+arquitectura subyacente; ellas simplemente necesitan un servidor donde correr. Y eso es el preámbulo a un concepto que hoy en día tenemos que son
+Contenedores.
+
+
+
+
+
+
+
+
+
+
+
+
